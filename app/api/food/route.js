@@ -2,6 +2,7 @@ import connectDB from "@/app/config/db";
 import FoodItem from "@/app/models/foods";
 import { checkAdmin } from "@/utils/verifyAdmin";
 import { NextResponse } from "next/server";
+import { isURL } from "validator";
 
 //Get all Foods controller
 export async function GET(req, res) {
@@ -48,6 +49,15 @@ export async function POST(req, res) {
           {
             success: false,
             message: "Fields can't be empty",
+          },
+          { status: 400 }
+        );
+      }
+      if (!isURL(img)) {
+        return NextResponse.json(
+          {
+            success: false,
+            message: "Invalid Image URL, Please enter a valid URL",
           },
           { status: 400 }
         );

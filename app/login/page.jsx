@@ -13,8 +13,8 @@ const Login = () => {
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
   const [formData, setFormData] = useState({
-    email: "john.doe@example.com",
-    password: "password123",
+    email: "testUser@gmail.com",
+    password: "121212",
   });
 
   useEffect(() => {
