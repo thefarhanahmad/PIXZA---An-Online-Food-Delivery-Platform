@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import ContactForm from "@/components/contactForm";
 
 const About = () => {
   return (
@@ -150,51 +151,8 @@ const About = () => {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-flex h-10 items-center justify-center rounded-md bg-orange-500 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-orange-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-orange-500 disabled:pointer-events-none disabled:opacity-50 dark:bg-orange-500 dark:text-gray-900 dark:hover:bg-orange-500 dark:focus-visible:ring-orange-500">
-                  Get in Touch
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-100">
-                  Contact Us
-                </h2>
-                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  Have a question, comment, or feedback? We'd love to hear from
-                  you! Fill out the form below and one of our team members will
-                  get back to you as soon as possible.
-                </p>
-              </div>
-              <form className="mx-auto w-full max-w-sm space-y-2">
-                <div className="flex space-x-2">
-                  <Input
-                    type="text"
-                    placeholder="Name"
-                    className="max-w-lg flex-1 outline-none"
-                  />
-                  <Input
-                    type="email"
-                    placeholder="Email"
-                    className="max-w-lg flex-1 outline-none"
-                  />
-                </div>
-                <Input
-                  type="text"
-                  placeholder="Subject"
-                  className="max-w-lg flex-1 outline-none"
-                />
-                <Textarea
-                  placeholder="Message"
-                  className="max-w-lg flex-1 outline-none"
-                />
-                <Button type="submit" className="w-full">
-                  Submit
-                </Button>
-              </form>
-            </div>
-          </div>
-        </section>
+    
+        <ContactForm />
       </main>
     </div>
   );

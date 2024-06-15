@@ -27,12 +27,14 @@ const Products = () => {
 
   return (
     <div className=" w-full bg-gray-200">
-      <div className="sm:w-11/12 mx-auto bg-green-300  sm:p-6 p-4">
+      <div className="sm:w-11/12 mx-auto  sm:p-6 p-4">
         <FilteredButton items={items} setItems={setItems} />
 
         {/* products by category */}
         {items?.length === 0 ? (
-          <div className="text-2xl font-semibold text-black my-6">No Foods Found</div>
+          <div className="text-2xl font-semibold text-black my-6">
+            No Foods Found
+          </div>
         ) : (
           <>
             <CategorySection category={"Pizza"} product={pizza} />

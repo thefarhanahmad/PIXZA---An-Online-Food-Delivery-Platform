@@ -42,15 +42,7 @@ export async function POST(req, res) {
     if (isAdmin) {
       const { name, category, foodType, price, description, img } =
         await req.json();
-      // console.log(
-      //   "data from json : ",
-      //   name,
-      //   category,
-      //   foodType,
-      //   price,
-      //   description,
-      //   img
-      // );
+
       if (!name || !category || !foodType || !price || !description || !img) {
         return NextResponse.json(
           {
@@ -109,6 +101,7 @@ export async function POST(req, res) {
     console.log("error : ", error);
     return NextResponse.json(
       {
+        success: false,
         message: "error in Adding foods",
       },
       {
