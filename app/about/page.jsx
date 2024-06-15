@@ -1,8 +1,5 @@
 import Link from "next/link";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import ContactForm from "@/components/contactForm";
+import ContactForm from "@/components/ContactForm";
 
 const About = () => {
   return (
@@ -151,7 +148,7 @@ const About = () => {
             </div>
           </div>
         </section>
-    
+
         <ContactForm />
       </main>
     </div>
