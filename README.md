@@ -23,12 +23,14 @@ This is a full-stack web application built with Next.js, Tailwind CSS, and Mongo
 - Place orders with Razorpay payment integration
 - View order details
 - Admin panel to manage food items and users
+- Responsive Design: Optimized for both desktop and mobile devices.
 
 ## Tech Stack
 
 - **Frontend**: Next.js, Tailwind CSS
 - **Backend**: Next.js API routes
 - **Database**: MongoDB
+- **State Management**: Redux Toolkit
 - **Payment Gateway**: Razorpay
 
 ## Installation
