@@ -7,9 +7,9 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import EmptyCart from "@/components/EmptyCart";
 
-const page = () => {
+const CartPage = () => {
   const { cartItems } = useSelector((state) => state.cart);
-  // console.log("items in cart {Cart Page} : ", cartItems);
+  // console.log("items in cart {cart page} : ", cartItems);
   const router = useRouter();
   const dispatch = useDispatch();
   const totalPrice = cartItems?.reduce(
@@ -37,7 +37,7 @@ const page = () => {
         const orderId = order.data.orderId;
         return orderId;
       } else {
-        toast.error("Login First")
+        toast.error("Login First");
         router.push("/login");
       }
     } catch (error) {
@@ -208,4 +208,4 @@ function TrashIcon(props) {
   );
 }
 
-export default page;
+export default CartPage;

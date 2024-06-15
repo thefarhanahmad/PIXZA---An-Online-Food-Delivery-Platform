@@ -8,7 +8,7 @@ import React from "react";
 import useSWR from "swr";
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-const page = () => {
+const OrdersPage = () => {
   const { data, error } = useSWR("/api/foodOrders", fetcher);
   // console.log("my order data  : ", data);
 
@@ -75,4 +75,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default OrdersPage;
