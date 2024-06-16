@@ -9,8 +9,6 @@ export const POST = async (req, res) => {
     await connectDB();
     const { email, password } = await req.json();
 
-    // console.log("data from json : ", email, password);
-
     if (!email || !password) {
       return NextResponse.json(
         {
@@ -42,7 +40,7 @@ export const POST = async (req, res) => {
         { userId: alreadyExistUser._id },
         process.env.JWT_SECRET,
         {
-          expiresIn: "24hr",
+          expiresIn: "24h",
         }
       );
 
@@ -61,7 +59,10 @@ export const POST = async (req, res) => {
 
       response.cookies.set("token", token, {
         httpOnly: true,
-        // expires: new Date(Date.now() + 3600000),
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "strict",
+        maxAge: 24 * 60 * 60,
+        path: "/",
       });
 
       // return response
