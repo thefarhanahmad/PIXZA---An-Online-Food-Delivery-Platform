@@ -33,7 +33,7 @@ const Products = () => {
         {/* products by category */}
         {items?.length === 0 ? (
           <div className="text-2xl font-semibold text-black my-6">
-            No Foods Found
+            Loading...
           </div>
         ) : (
           <>
