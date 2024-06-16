@@ -52,7 +52,7 @@ export default function UpdateFood({ params }) {
 
   useEffect(() => {
     getFoodById();
-  }, []);
+  }, [id]);
 
   const [formData, setFormData] = useState({
     name: "",

@@ -21,7 +21,7 @@ const FilteredButton = ({ items, setItems }) => {
 
   useEffect(() => {
     getAllFoods();
-  }, []);
+  });
   const [active, setActive] = useState("All");
   // console.log("active : ", active);
 
