@@ -21,7 +21,7 @@ const FilteredButton = ({ items, setItems }) => {
 
   useEffect(() => {
     getAllFoods();
-  });
+  }, []);
   const [active, setActive] = useState("All");
   // console.log("active : ", active);
 
@@ -45,9 +45,6 @@ const FilteredButton = ({ items, setItems }) => {
     setItems(filteredProduct);
   }, [data]);
 
-  // if (!data) {
-  //   return <Spinner />;
-  // }
   return (
     <div>
       {/* Filter buttons */}
